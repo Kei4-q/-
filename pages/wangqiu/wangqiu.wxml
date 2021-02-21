@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="quanju" >
+  
+  <view class="beijing">
+  <view class="search" bindtap="searchClick">
+  <image src="../../images/search.png" class="tubiao"></image>
+<input type="text" class="search-top" placeholder="搜索你感兴趣的新闻"/>
+</view>
+</view>
+<view class="dingbu" >
+    <view  bindtap="shouyeClick" >首页</view>
+    <view bindtap="zuqiuClick" style="left:25%">足球</view>
+    <view bindtap="lanqiuClick" style="left:50%">篮球</view>
+    <view  class="active" bindtap="wangqiuClick" style="left:75%">网球</view>
+    
+</view>
+
+<view class="index_swiper">
+  <swiper class="lunbo" autoplay="true" circular="true" interval="2000" >
+  <swiper-item  wx:for="{{news}}" wx:key="index" wx-key="{{index}}"  data-news_item="{{item}}" wx:for-item="item"bindtap="xiangqingClick" wx:if="{{item.photo_uri!=''}}" >
+    <image src='{{item.photo_uri}}' mode="aspectFill"></image>
+    <text>{{item.title}}</text>
+  </swiper-item>
+</swiper>
+</view>
+
+<view wx:for="{{news}}" wx:key="index" wx-key="{{index}}" data-index="{{index}}" wx:for-item="item">
+  <view class="xinwen"  bindtap="xiangqingClick" data-news_item="{{item}}" > 
+    <view class=".top">
+      <image wx:if="{{1}}" class="touxiang" src="{{item.at_avator}}" mode="aspectFit"></image>
+      <view   class="zuozhe">{{item.at_name}}</view>
+      <!-- <view wx:if="{{1}}" class="no_interest"> 不感兴趣</view> -->
+    </view>
+      <view class="neirong">{{item.title}}</view>
+    <view class=".bot">
+      <view class="jutineirong">{{item.detail}}</view>
+      <image wx:if="{{1}}" class="xinwentupian" src="{{item.photo_uri}}" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>
+
+</view>

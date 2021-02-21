@@ -1,0 +1,14 @@
+<view class="xinxi" wx:for="{{authorData}}" wx:key="index" wx-key="{{index}}" data-news_item="{{item}}" wx:for-item="item" bindtap="change2">
+  <image class="touxiang" src="{{item.at_avator}}" mode="aspectFit"></image>
+  <view  class="mingzi">{{item.at_name}}</view>
+  <button class="guanzhu" hover-class="guangzhu-hover">＋关注</button>
+</view>
+<view wx:for="{{authorData}}" wx:key="index" wx-key="{{index}}" data-news_item="{{item}}" wx:for-item="item" class="{{flag?'jianjie':'xinagxi'}}" bindtap="change1">{{item.at_description}}</view>
+
+  <view class="fensi">粉丝数 99</view>
+
+<view class="wenzhang" wx:for="{{authorNews}}" wx:key="index" wx-key="{{index}}" data-news_item="{{item}}" wx:for-item="item" bindtap="xiangqingClick">
+  <view class="title">{{item.title}}</view>
+  <view class="content">{{item.detail}}</view>
+</view>
+

@@ -1,0 +1,30 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <image src="../../images/search.png" class="tubiao"></image>
+  <input type="text" class="search-top" placeholder="{{keyword}}" value="{{startValue}}" bindinput="input_keyword"/>
+</view>
+<view class="cancel" bindtap="go">搜索</view>
+<view class="history">
+  <view class="history-top">
+    <image src="../../images/searchhis.png" class="hisicon"></image>
+    <view class="wenzi">历史搜索</view>
+    <image src="../../images/bin.png" class="hisbin" bindtap="del"></image>
+  </view>
+  <view wx:for="{{records}}" wx:key="index" wx-key="{{index}}" wx:for-item="item" >
+    <view class="history-content" data-keyword="{{item}}" bindtap="click_record">{{item}}</view>
+  </view>
+</view>
+
+<view wx:for="{{news}}" wx:key="index" wx-key="{{index}}" data-index="{{index}}" wx:for-item="item">
+  <view class="xinwen"  bindtap="xiangqingClick" data-news_item="{{item}}" > 
+    <view class=".top">
+      <image wx:if="{{1}}" class="touxiang" src="{{item.at_avator}}" mode="aspectFit"></image>
+      <view   class="zuozhe">{{item.at_name}}</view>
+    </view>
+      <view class="neirong">{{item.title}}</view>
+    <view class=".bot">
+      <view class="jutineirong">{{item.detail}}</view>
+      <image wx:if="{{1}}" class="xinwentupian" src="{{item.photo_uri}}" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>

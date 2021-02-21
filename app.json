@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/zuozhe/zuozhe",
+    "pages/search/search",
+    "pages/xiangqing/xiangqing",
+    "pages/geren/geren",
+    "pages/denglu/denglu",
+    "pages/zuqiu/zuqiu",
+    "pages/logs/logs",
+    "pages/lanqiu/lanqiu",
+    "pages/wangqiu/wangqiu",
+    "pages/liulan/liulan",
+    "pages/zhuce/zhuce"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1490e2",
+    "navigationBarTitleText": "体育大世界",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#0c99fd",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/geren/geren",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap37.json"
+}

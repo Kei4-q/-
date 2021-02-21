@@ -1,0 +1,18 @@
+<view style="padding:9rpx;">
+  <view class="xinxi">
+    <image class="touxiang" src="../../images/user.png" mode="aspectFill"></image>
+  </view>
+  <view class="biankuang">
+    <!-- <view>帐号：</view> -->
+    <input class="username shurukuang" bindinput='input_username' placeholder="请输入用户名"  />
+  </view>
+  <view class="biankuang">
+    <!-- <view>密码：</view> -->
+    <input class="password shurukuang" bindinput='input_password' type="password" placeholder="请输入密码"  />
+  </view>
+  <view class="biankuang">
+    <!-- <view>密码：</view> -->
+    <input class="password shurukuang" bindinput='input_password_check' type="password" placeholder="请再次输入密码"  />
+  </view>
+  <button type="primary" form-type="submit" bindtap="" style="background-color: rgb(65, 146, 221);" bindtap="go">完成注册</button>
+</view>

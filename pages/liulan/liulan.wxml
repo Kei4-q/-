@@ -1,0 +1,12 @@
+<!--pages/liulan/liulan.wxml-->
+<view style="padding:9rpx">
+<view class="liulan">浏览记录</view>
+
+<view  wx:for="{{news}}" wx-key="{{index}}" data-index="{{index}}" wx:for-item="item">
+  <view class="xinwen" bindtap="xiangqingClick" data-news_item="{{item}}">
+    <image src="{{item.at_avator}}" class="touxiang" mode="aspectFit"/>
+    <view class="zuozhe">{{item.at_name}}</view>
+    <text class="neirong">{{item.title}}</text>
+  </view>
+</view>
+</view>

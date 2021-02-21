@@ -1,0 +1,13 @@
+<!--pages/geren/geren.wxml-->
+<view style="padding:9rpx">
+<view class="xinxi">
+  <image class="touxiang"  src="../../images/user.png" mode="aspectFill"></image>
+  <view class="username">{{username}}</view>
+  </view>
+  <view class="quit" bindtap="quitClick">退出登录</view>
+<view class="biankuang">
+<!-- <view class="gongneng" bindtap="{{'username'?'dengluClick':'liulanClick'}}">浏览记录</view> -->
+<image class="xiaotubiao" src="../../images/record.png" mode="aspectFill"></image>
+<view class="gongneng" bindtap="liulanClick">浏览记录</view>
+</view>
+</view>

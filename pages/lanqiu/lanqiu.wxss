@@ -1,0 +1,162 @@
+/**index.wxss**/
+.quanju{
+  padding:9rpx;
+}
+.beijing{
+  position: fixed;
+  width: 740rpx;
+  height: 100rpx;
+  background-color: #fff;
+  top: 0;
+  z-index: 2;
+}
+.search{
+  width: 710rpx;
+  height: 80rpx;
+  background-color: #eee;
+  margin:10rpx 10rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  float: left;
+}
+.tubiao{
+  width: 60rpx;
+  height: 60rpx;
+  float: left;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+.search-top{
+  margin:10rpx 0rpx;
+  height: 60rpx;
+  width: 450rpx;
+  line-height: 80rpx;
+  float: left;
+
+}
+.dingbu{
+  width: 750rpx;
+  height: 80rpx;
+  background-color:white;
+  z-index: 1;
+  margin-bottom: 10rpx;
+}
+
+.dingbu view{
+  background-color:white;
+  width:187.5rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  position: fixed;
+  top: 100rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  text-align: center;
+  z-index: 1;
+  border-radius: 0 0 10rpx 10rpx;
+}
+
+.active {
+  color: rgb(46, 147, 187);
+  border-bottom: solid 4rpx rgb(46, 147, 187);
+}
+
+.index_swiper .lunbo{
+  margin-top: 120rpx;
+  width: 100%;
+  height:500rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.index_swiper .lunbo image{
+  width: 100%;
+  height: 100%;
+  border-radius: 17.5rpx;
+  position: absolute;
+}
+.lunbo text{
+  
+  width: 100%;
+  height: 40%;
+  font-size: 50rpx;
+  color: white;
+  background-color: rgba(0,0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  border-radius: 17.5rpx;  
+}
+
+.xinwen {
+  width: 732rpx;
+  height:220rpx;
+  /* border: solid 7.5rpx rgb(229, 229, 229); */
+  border-radius: 10rpx;
+  position: relative;
+  margin-bottom:25rpx;
+  box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(176, 176, 176, 0.5);
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.xinwen .top .touxiang{
+  width: 50rpx;
+  height: 50rpx;
+  padding-top:3rpx;
+  border-radius: 50%;
+}
+
+.xinwen .top .zuozhe{
+  width: 400rpx;
+  height: 50rpx;
+  font-size: 25rpx;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  line-height: 50rpx;
+}
+.xinwen .top .no_interest{
+  width: 100%;
+  height: 50rpx;
+  font-size: 25rpx;
+  padding-left: 10prx;
+  padding-top: 10rpx;
+  text-align: end;
+}
+
+.xinwen .neirong{
+  height: 45rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 45rpx;
+  padding-left: 5rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+}
+.bot{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.bot .jutineirong{
+  width:100%;
+  height: 100rpx;
+  font-size: 25rpx;
+  color: rgb(85, 85, 85);
+  padding-left: 5rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+}
+.xinwen .xinwentupian{
+  width: 135rpx;
+  height: 85rpx;
+ 
+}

@@ -1,0 +1,48 @@
+<view class="quanju">
+  <view class="biaotineirong">
+    <view class="biaoti">{{news_item.title}}</view>
+    <view class="xinxi">
+      <image wx:if="{{1}}" class="touxiang" src="{{news_item.at_avator}}"></image>
+      <view class="zuozhe" bindtap="zuozheClick">{{news_item.at_name}}</view>
+      <button class="guanzhu" hover-class="guangzhu-hover">关注</button>
+    </view>
+  </view>
+  <view class="news" wx:for="{{news_item.content}}" wx:key="index" wx-key="{{index}}" wx:for-item="item"
+    bindtap="change2">
+    <text class="words" wx:if="{{item.type=='word'}}">{{item.text}}</text>
+    <image class="photo" wx:if="{{item.type=='photo'}}" src="{{item.uri}}" data-src='{{item.uri}}' mode="widthFix"
+      bindtap="preview"></image>
+  </view>
+
+<view style="width:730rpx;height:70rpx;text-align:center;line-height:70rpx;color:#aaa;font-weight:bold;" >- 精彩评论 -</view>
+  <view class="comment_ctn" wx:for="{{comment}}" wx:key="index" wx-key="{{index}}" wx:for-item="item">
+    <view class="comment_head_tail">
+      <image src="/images/user.png" mode="aspectFit" style="height:33rpx;width:33rpx;" />
+      <view style="flex:1;font-weight:bold;font-size:33rpx;">{{item.user_name}}</view>
+      <!-- <view style="color:darkgray;font-size:28rpx;">点赞数</view> -->
+      <view wx:if="{{item.user_name === username}}" bindtap="delete_comment" data-comment_id="{{item.comment_id}}" style="background-color:rgb(61,187,236);color:#fff;padding:0 10rpx;border-radius:10rpx;">删除</view>
+    </view>
+    <view class="comment_text">
+      {{item.content}}
+    </view>
+    <view class="comment_head_tail" style="margin-top:10rpx;font-size:28rpx;">
+      <view>{{item.timestamp}}</view>
+    </view>
+    
+  </view>
+</view>
+<view style="height:90rpx;"/>
+<view class="comment" bindtap="change1">
+  <textarea class="{{comContent?'comContent2':'comContent1'}}" bindinput="textcontent" placeholder="期待你的评论"
+    cursor-spacing="100" fixed="true" value="{{startvalue}}"></textarea>
+  <button class="comBtn" style="width:100rpx;font-size:30rpx;height:50rpx;padding:0;line-height:50rpx;buttom:0;"
+    bindtap="comment">评论</button>
+  <!-- <scroll-view wx:if="{{comContent}}" class="gundong" scroll-y="true" style="overflow:scroll">
+      <view wx:for="{{comment}}" wx:key="index" wx-key="{{index}}" wx:for-item="item" class="pinglun">
+        <view class="username">{{item.user_name}}</view>
+        <view class="time">{{item.timestamp}}</view>
+        <view class="content">{{item.content}}</view>
+        <view wx:if="{{item.user_name === username}}" class="delete" bindtap="delete_comment" data-comment_id="{{item.comment_id}}">删除</view>
+      </view>
+    </scroll-view> -->
+</view>
